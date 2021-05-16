@@ -1,3 +1,9 @@
-const userName = 'Max';
+const button = document.querySelector('button')!;
 
-console.log(userName);
+function clickHandler(message: string) {
+  console.log('Clicked! ' + message);
+}
+
+if (button) {
+  button.addEventListener('click', clickHandler.bind(null, 'You\'re welcome'));
+}
